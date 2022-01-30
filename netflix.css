@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  .netflix{
+    position: relative;
+    width: 340px;
+    height: 510px;
+    overflow: hidden;
+    transform: scale(.8);
+  
+  }
+  .netflix:before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 120px;
+    z-index: 2;
+    border-top-left-radius: 100%;
+     border-top-right-radius: 100%;
+    transform: scaleX(1.5);
+  }
+  
+  .netflix:after, h3:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, transparent, #000, #000);
+    width: 400%;
+    height: 100%;
+    z-index: 3;
+    animation: animate 2s linear forwards;
+  }
+  @keyframes animate{
+    0%{
+      right: 0;
+    }
+    100%{
+      right: -400%;
+    }
+  }
+  .netflix span {
+    position: absolute;
+    width: 100px; 
+    height: 80%;
+    background: #fff;
+    top: 0;
+  }
+  
+  .netflix span:nth-child(1) {
+  
+    background: #b00612;
+    left: 0;
+  
+  }
+  .netflix span:nth-child(2) {
+  
+    background: #e50815;
+    left: 0;
+    z-index: 1;
+    transform-origin: top left;
+    transform: skewX(30deg);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+  }
+  
+  .netflix span:nth-child(3) {
+    background: #b00612;
+    right: 0;
+  }
+  
+  
+  h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-family: arial, monospace;
+    letter-spacing: 10px;
+    font-size: 55px;
+    text-transform: uppercase;
+    transform: translateY(-8rem);
+    overflow: hidden;
+  }
